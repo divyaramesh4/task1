@@ -1,0 +1,131 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--label-color);
+}
+
+input, select {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    background: var(--input-bg);
+    color: var(--input-text);
+}
+
+input:focus, select:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2575fc;
+    transform: translateY(-3px);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--result-color);
+}
+
+#themeToggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--icon-color);
+    transition: color 0.3s;
+}
+
+:root {
+    --bg-gradient: linear-gradient(to right, #6a11cb, #2575fc);
+    --text-color: #333;
+    --container-bg: #fff;
+    --heading-color: #333;
+    --label-color: #666;
+    --input-border: #ccc;
+    --input-bg: #fff;
+    --input-text: #333;
+    --result-color: #333;
+    --icon-color: #333;
+}
+
+.dark-mode {
+    --bg-gradient: linear-gradient(to right, #232526, #414345);
+    --text-color: #f1f1f1;
+    --container-bg: #333;
+    --heading-color: #f1f1f1;
+    --label-color: #ccc;
+    --input-border: #555;
+    --input-bg: #444;
+    --input-text: #f1f1f1;
+    --result-color: #f1f1f1;
+    --icon-color: #f1f1f1;
+}
